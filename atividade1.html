@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    
+    <h1>Administração Escolar</h1>
+    <p id="resultados"></p>
+    
+    
+
+    <script>
+        let proximoounao = "";
+        let resultados = ""; 
+
+        do {
+            let nome = prompt("Digite o nome do professor");
+            let endereco = prompt("Digite o endereço");
+            let cidade = prompt("Digite o nome da cidade");
+            let uf = prompt("Digite o nome do estado");
+            let cep = prompt("Digite o CEP");
+            let telefone = prompt("Digite o telefone");
+            let cpf = prompt("Digite o CPF");
+            let rg = prompt("Digite o RG");
+            let datanascimento = prompt("Digite a data de nascimento");
+            let grau = prompt("Digite o grau de escolaridade");
+            let curso = prompt("Digite o curso em que se formou");
+            proximoounao = prompt("Deseja terminar? Digite FIM ou clique em OK");
+        
+           
+            resultados += "<br><br>Nome: " + nome  ;
+            resultados += "<br>Endereço: " + endereco ;
+            resultados += "<br>Cidade: " + cidade ;
+            resultados += "<br>UF: " + uf ;
+            resultados += "<br>CEP: " + cep ;
+            resultados += "<br>Telefone: " + telefone ;
+            resultados += "<br>CPF: " + cpf ;
+            resultados += "<br>RG: " + rg ;
+            resultados += "<br>Data de Nascimento: " + datanascimento ;
+            resultados += "<br>Grau de Escolaridade: " + grau ;
+            resultados += "<br>Curso em que se formou: " + curso ;
+           
+
+        } while (proximoounao != "FIM" && proximoounao != "fim" && proximoounao != "Fim");
+
+        document.getElementById("resultados").innerHTML = resultados;
+
+
+
+//         // aqui com o While
+//             let nome  = "";
+//             let endereco  = "";
+//             let cidade  = "";
+//             let uf  = "";
+//             let cep  = "";
+//             let telefone  = "";
+//             let cpf  = "";
+//             let rg  = "";
+//             let datanascimento  = "";
+//             let grau  = "";
+//             let curso = ""; 
+//             let resultadosS = ""; 
+//             let proximoounao = prompt("Deseja terminar? Digite FIM ou clique em OK");
+
+// while (proximoounao != "FIM" && proximoounao != "fim" && proximoounao != "Fim"){
+
+            
+//              endereco = prompt("Digite o endereço");
+//              cidade = prompt("Digite o nome da cidade");
+//              uf = prompt("Digite o nome do estado");
+//              cep = prompt("Digite o CEP");
+//              telefone = prompt("Digite o telefone");
+//              cpf = prompt("Digite o CPF");
+//              rg = prompt("Digite o RG");
+//              datanascimento = prompt("Digite a data de nascimento");
+//              grau = prompt("Digite o grau de escolaridade");
+//              curso = prompt("Digite o curso em que se formou");
+//             proximoounao = prompt("Deseja terminar? Digite FIM ou clique em OK");
+        
+           
+//             resultados += "<br><br>Nome: " + prompt("Digite o nome do professor");
+//             resultados += "<br>Endereço: " + endereco ;
+//             resultados += "<br>Cidade: " + cidade ;
+//             resultados += "<br>UF: " + uf ;
+//             resultados += "<br>CEP: " + cep ;
+//             resultados += "<br>Telefone: " + telefone ;
+//             resultados += "<br>CPF: " + cpf ;
+//             resultados += "<br>RG: " + rg ;
+//             resultados += "<br>Data de Nascimento: " + datanascimento ;
+//             resultados += "<br>Grau de Escolaridade: " + grau ;
+//             resultados += "<br>Curso em que se formou: " + curso ;
+// }
+//             document.getElementById("resultados").innerHTML = resultados;
+//     </script>
+
+// </body>
+// </html>

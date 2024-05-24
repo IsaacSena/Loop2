@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <h1>Diciplinas de uma escola</h1>
+    <p id="resultados"></p>
+
+    <script>
+
+        let nomealuno = ""
+        let materia = ""
+        let descricao = ""
+        let frequencia = ""
+        let notalauno = ""
+        let resultados = ""
+        let mensagem = notalauno >= 7 ? "Aluno aprovado" : "Aluno reprovado";
+        let continuarounao = ""
+        
+
+        while (continuarounao != "FIM" && continuarounao != "fim" && continuarounao != "Fim") {
+            
+            resultados += "<br><br>Nome do aluno: " + prompt("Digite o nome do aluno")
+            resultados += "<br>Matéria: " + prompt("Digite a matéria")
+            resultados += "<br>Descrição do conteúdo: " + prompt("Digite a descrição do conteúdo")
+            resultados += "<br>Frenquência do aluno: " + prompt("Digite a frenquência do aluno")
+            resultados += "<br>Nota do aluno: " + prompt("Digite a nota do aluno")
+            resultados += "<br> Aprovado ou reprovado: " + mensagem
+
+           continuarounao = prompt("Deseja terminar? Digite FIM ou clique em OK para continuar.") 
+
+        }
+            
+            document.getElementById("resultados").innerHTML = resultados;
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <h1>Declaração de imposto</h1>
+    <div id="resultados"></div>
+
+    <script>
+    
+    let resultados = ""; // Corrigido: inicializando a variável resultados
+    let continuarounao = "";
+    
+    while (continuarounao !== "FIM" && continuarounao !== "fim" && continuarounao !== "Fim") {
+        let nome = prompt("Digite o nome do contribuinte");
+        let cpf = prompt("Digite o CPF");
+        let rendaanual = (prompt("Digite a renda anual"));
+        let dependente = (prompt("Digite o número de dependentes"));
+        let imposto = 0;
+        let mensagem = "";
+
+        resultados += "<br><br>Nome do contribuinte: " + nome;
+        resultados += "<br>CPF: " + cpf;
+        resultados += "<br>Renda anual: " + rendaanual;
+        resultados += "<br>Número de dependentes: " + dependente;
+
+        if (rendaanual <= 900 ) {
+            mensagem = "Isento de imposto";
+        } else if (rendaanual <= 5000) {
+            imposto = rendaanual * 5 / 100;
+            imposto -= dependente * 110;
+            mensagem = "Você terá que pagar R$" + imposto;
+        } else if (rendaanual <= 10000) {
+            imposto = rendaanual * 10 / 100;
+            imposto -= dependente * 110;
+            mensagem = "Você terá que pagar R$" + imposto;
+        } else {
+            imposto = rendaanual * 15 / 100;
+            imposto -= dependente * 110;
+            mensagem = "Você terá que pagar R$" + imposto;
+        }
+
+        resultados += "<br>Imposto a pagar: " + mensagem;
+
+        continuarounao = prompt("Deseja terminar? Digite FIM ou clique em OK para continuar.");
+    }
+    
+    document.getElementById("resultados").innerHTML = resultados;
+    
+    </script>
+</body>
+</html>
